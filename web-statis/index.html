@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio - Ekatiara</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:#1e293b;
+    color:white;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0f172a,#334155);
+    color:white;
+    padding:20px;
+}
+
+.hero img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid white;
+    margin-bottom:20px;
+    object-fit:cover;
+}
+
+.upload-box{
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    font-size:20px;
+    margin:15px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:#38bdf8;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:36px;
+    color:#1e293b;
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-card h3{
+    margin-bottom:10px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    background:#1e293b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+input[type="file"]{
+    background:white;
+    padding:8px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:18px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">Portofolio</div>
+
+<ul>
+<li><a href="#beranda">Beranda</a></li>
+<li><a href="#tentang">Tentang</a></li>
+<li><a href="#keahlian">Keahlian</a></li>
+<li><a href="#proyek">Proyek</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="beranda">
+
+<img id="fotoProfil"
+src="https://via.placeholder.com/180"
+alt="Foto Profil">
+
+<div class="upload-box">
+<input type="file"
+id="uploadFoto"
+accept="image/*">
+</div>
+
+<h1>Ekatiara</h1>
+
+<p>Dosen | Peneliti | Web Developer | Data Scientist</p>
+
+<a href="#kontak" class="btn">Hubungi Saya</a>
+
+</section>
+
+<section id="tentang">
+
+<h2 class="section-title">Tentang Saya</h2>
+
+<div class="about">
+<p>
+Saya adalah seorang dosen yang memiliki minat pada bidang
+Teknologi Informasi, Data Science, Artificial Intelligence,
+Machine Learning, serta Pengembangan Sistem Informasi Berbasis Web.
+Aktif dalam kegiatan penelitian, pengabdian masyarakat,
+dan pengembangan inovasi pembelajaran berbasis teknologi.
+</p>
+</div>
+
+</section>
+
+<section id="keahlian">
+
+<h2 class="section-title">Keahlian</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>HTML & CSS</h3>
+</div>
+
+<div class="skill-card">
+<h3>JavaScript</h3>
+</div>
+
+<div class="skill-card">
+<h3>PHP & MySQL</h3>
+</div>
+
+<div class="skill-card">
+<h3>Python</h3>
+</div>
+
+<div class="skill-card">
+<h3>Machine Learning</h3>
+</div>
+
+<div class="skill-card">
+<h3>Data Science</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="proyek">
+
+<h2 class="section-title">Proyek</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<h3>Sistem Informasi Perpustakaan</h3>
+<p>
+Aplikasi berbasis web untuk pengelolaan data buku,
+anggota, dan transaksi peminjaman.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Analisis Sentimen Media Sosial</h3>
+<p>
+Implementasi TF-IDF, Naive Bayes, dan Logistic Regression
+untuk klasifikasi sentimen.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Prediksi Harga Saham</h3>
+<p>
+Menggunakan metode Deep Learning LSTM
+untuk prediksi data time series.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Klasifikasi Citra Buah dan Sayuran</h3>
+<p>
+Implementasi CNN untuk identifikasi kualitas
+buah dan sayuran secara otomatis.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="kontak">
+
+<h2 class="section-title">Kontak</h2>
+
+<div class="contact">
+<p>Email : ekatiara@email.com</p>
+<p>Telepon : +62 812-3456-7890</p>
+<p>LinkedIn : linkedin.com/in/ekatiara</p>
+<p>GitHub : github.com/ekatiara</p>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Portofolio Ekatiara. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+// Menampilkan foto yang dipilih
+document.getElementById('uploadFoto')
+.addEventListener('change', function(){
+
+    const file = this.files[0];
+
+    if(file){
+
+        const reader = new FileReader();
+
+        reader.onload = function(e){
+
+            document.getElementById('fotoProfil').src =
+            e.target.result;
+
+            // Simpan ke Local Storage
+            localStorage.setItem(
+                'fotoProfil',
+                e.target.result
+            );
+        }
+
+        reader.readAsDataURL(file);
+    }
+});
+
+// Menampilkan foto yang tersimpan
+const savedPhoto =
+localStorage.getItem('fotoProfil');
+
+if(savedPhoto){
+    document.getElementById('fotoProfil').src =
+    savedPhoto;
+}
+
+</script>
+
+</body>
+</html>
