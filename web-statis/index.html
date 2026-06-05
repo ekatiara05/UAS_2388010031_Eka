@@ -3,14 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portofolio - Ekatiara</title>
+
+<title>Portofolio Ekatiara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 html{
@@ -18,18 +22,19 @@ html{
 }
 
 body{
-    background:#f5f7fa;
+    background:#f8fafc;
     color:#333;
-    line-height:1.6;
 }
 
+/* NAVBAR */
+
 header{
-    background:#1e293b;
-    color:white;
     position:fixed;
     width:100%;
     top:0;
     z-index:1000;
+    background:#0f172a;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 nav{
@@ -38,12 +43,13 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 20px;
+    padding:18px 25px;
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
+    color:white;
+    font-size:28px;
+    font-weight:700;
 }
 
 nav ul{
@@ -52,95 +58,118 @@ nav ul{
 }
 
 nav ul li{
-    margin-left:25px;
+    margin-left:30px;
 }
 
 nav ul li a{
-    color:white;
     text-decoration:none;
-    transition:0.3s;
+    color:white;
+    font-size:16px;
+    transition:.3s;
 }
 
 nav ul li a:hover{
     color:#38bdf8;
 }
 
+/* HERO */
+
 .hero{
     min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#334155);
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
     text-align:center;
-    background:linear-gradient(135deg,#0f172a,#334155);
     color:white;
-    padding:20px;
+    padding:120px 20px 50px;
 }
 
 .hero img{
-    width:180px;
-    height:180px;
+    width:220px;
+    height:220px;
     border-radius:50%;
-    border:5px solid white;
-    margin-bottom:20px;
     object-fit:cover;
-}
-
-.upload-box{
-    margin-bottom:20px;
+    border:6px solid white;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
 .hero h1{
-    font-size:48px;
+    margin-top:25px;
+    font-size:60px;
+    font-weight:700;
 }
 
 .hero p{
-    font-size:20px;
-    margin:15px 0;
+    margin-top:10px;
+    font-size:24px;
+    color:#e2e8f0;
+}
+
+.hero-buttons{
+    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
+    padding:14px 30px;
     background:#38bdf8;
     color:white;
-    padding:12px 25px;
     text-decoration:none;
-    border-radius:8px;
-    margin-top:10px;
+    border-radius:10px;
+    margin:10px;
+    transition:.3s;
 }
 
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
 section{
-    padding:100px 10%;
+    padding:90px 10%;
 }
 
 .section-title{
     text-align:center;
+    font-size:40px;
     margin-bottom:40px;
-    font-size:36px;
-    color:#1e293b;
+    color:#0f172a;
 }
 
 .about{
-    text-align:center;
     max-width:900px;
     margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
 }
 
-.skills-grid{
+/* SKILLS */
+
+.skills{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:20px;
 }
 
 .skill-card{
     background:white;
     padding:25px;
-    border-radius:12px;
+    border-radius:15px;
     text-align:center;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.projects-grid{
+.skill-card h3{
+    color:#0f172a;
+}
+
+/* PROJECT */
+
+.projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
@@ -148,14 +177,26 @@ section{
 
 .project-card{
     background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.project-card h3{
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
     margin-bottom:10px;
 }
+
+/* CONTACT */
 
 .contact{
     text-align:center;
@@ -163,42 +204,44 @@ section{
 
 .contact p{
     margin:10px 0;
+    font-size:18px;
 }
+
+/* FOOTER */
 
 footer{
-    background:#1e293b;
+    background:#0f172a;
     color:white;
     text-align:center;
-    padding:20px;
-}
-
-input[type="file"]{
-    background:white;
-    padding:8px;
-    border-radius:5px;
-    cursor:pointer;
+    padding:25px;
 }
 
 @media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
+}
 
 nav{
     flex-direction:column;
 }
 
 nav ul{
-    margin-top:10px;
+    margin-top:15px;
     flex-wrap:wrap;
     justify-content:center;
 }
 
-.hero h1{
-    font-size:32px;
+nav ul li{
+    margin:8px;
 }
 
-.hero p{
-    font-size:18px;
 }
-}
+
 </style>
 </head>
 
@@ -206,6 +249,7 @@ nav ul{
 
 <header>
 <nav>
+
 <div class="logo">Portofolio</div>
 
 <ul>
@@ -215,26 +259,22 @@ nav ul{
 <li><a href="#proyek">Proyek</a></li>
 <li><a href="#kontak">Kontak</a></li>
 </ul>
+
 </nav>
 </header>
 
 <section class="hero" id="beranda">
 
-<img id="fotoProfil"
-src="https://via.placeholder.com/180"
-alt="Foto Profil">
-
-<div class="upload-box">
-<input type="file"
-id="uploadFoto"
-accept="image/*">
-</div>
+<img src="images/foto.jpg" alt="Foto Profil">
 
 <h1>Ekatiara</h1>
 
-<p>Dosen | Peneliti | Web Developer | Data Scientist</p>
+<p>Dosen | Peneliti | Data Scientist | Web Developer</p>
 
+<div class="hero-buttons">
 <a href="#kontak" class="btn">Hubungi Saya</a>
+<a href="#" class="btn">Download CV</a>
+</div>
 
 </section>
 
@@ -243,13 +283,14 @@ accept="image/*">
 <h2 class="section-title">Tentang Saya</h2>
 
 <div class="about">
+
 <p>
-Saya adalah seorang dosen yang memiliki minat pada bidang
-Teknologi Informasi, Data Science, Artificial Intelligence,
-Machine Learning, serta Pengembangan Sistem Informasi Berbasis Web.
-Aktif dalam kegiatan penelitian, pengabdian masyarakat,
-dan pengembangan inovasi pembelajaran berbasis teknologi.
+Saya merupakan dosen yang memiliki minat pada bidang Teknologi Informasi,
+Machine Learning, Artificial Intelligence, Data Science, dan Pengembangan Sistem Informasi.
+Aktif dalam kegiatan penelitian, publikasi ilmiah, pengabdian kepada masyarakat,
+serta pengembangan teknologi berbasis web dan kecerdasan buatan.
 </p>
+
 </div>
 
 </section>
@@ -258,7 +299,7 @@ dan pengembangan inovasi pembelajaran berbasis teknologi.
 
 <h2 class="section-title">Keahlian</h2>
 
-<div class="skills-grid">
+<div class="skills">
 
 <div class="skill-card">
 <h3>HTML & CSS</h3>
@@ -269,7 +310,7 @@ dan pengembangan inovasi pembelajaran berbasis teknologi.
 </div>
 
 <div class="skill-card">
-<h3>PHP & MySQL</h3>
+<h3>PHP & Laravel</h3>
 </div>
 
 <div class="skill-card">
@@ -292,38 +333,39 @@ dan pengembangan inovasi pembelajaran berbasis teknologi.
 
 <h2 class="section-title">Proyek</h2>
 
-<div class="projects-grid">
+<div class="projects">
 
 <div class="project-card">
+<img src="images/foto.jpg">
+
+<div class="project-content">
 <h3>Sistem Informasi Perpustakaan</h3>
 <p>
-Aplikasi berbasis web untuk pengelolaan data buku,
-anggota, dan transaksi peminjaman.
+Aplikasi manajemen buku dan peminjaman berbasis web.
 </p>
+</div>
 </div>
 
 <div class="project-card">
-<h3>Analisis Sentimen Media Sosial</h3>
+<img src="images/foto.jpg">
+
+<div class="project-content">
+<h3>Analisis Sentimen</h3>
 <p>
-Implementasi TF-IDF, Naive Bayes, dan Logistic Regression
-untuk klasifikasi sentimen.
+Implementasi TF-IDF dan Naive Bayes untuk klasifikasi sentimen.
 </p>
+</div>
 </div>
 
 <div class="project-card">
-<h3>Prediksi Harga Saham</h3>
+<img src="images/foto.jpg">
+
+<div class="project-content">
+<h3>Prediksi Saham LSTM</h3>
 <p>
-Menggunakan metode Deep Learning LSTM
-untuk prediksi data time series.
+Prediksi harga saham menggunakan Deep Learning LSTM.
 </p>
 </div>
-
-<div class="project-card">
-<h3>Klasifikasi Citra Buah dan Sayuran</h3>
-<p>
-Implementasi CNN untuk identifikasi kualitas
-buah dan sayuran secara otomatis.
-</p>
 </div>
 
 </div>
@@ -335,10 +377,12 @@ buah dan sayuran secara otomatis.
 <h2 class="section-title">Kontak</h2>
 
 <div class="contact">
-<p>Email : ekatiara@email.com</p>
-<p>Telepon : +62 812-3456-7890</p>
-<p>LinkedIn : linkedin.com/in/ekatiara</p>
-<p>GitHub : github.com/ekatiara</p>
+
+<p>📧 ekatiara@email.com</p>
+<p>📱 +62 812-3456-7890</p>
+<p>🌐 linkedin.com/in/ekatiara</p>
+<p>💻 github.com/ekatiara</p>
+
 </div>
 
 </section>
@@ -346,45 +390,6 @@ buah dan sayuran secara otomatis.
 <footer>
 <p>© 2026 Portofolio Ekatiara. All Rights Reserved.</p>
 </footer>
-
-<script>
-
-// Menampilkan foto yang dipilih
-document.getElementById('uploadFoto')
-.addEventListener('change', function(){
-
-    const file = this.files[0];
-
-    if(file){
-
-        const reader = new FileReader();
-
-        reader.onload = function(e){
-
-            document.getElementById('fotoProfil').src =
-            e.target.result;
-
-            // Simpan ke Local Storage
-            localStorage.setItem(
-                'fotoProfil',
-                e.target.result
-            );
-        }
-
-        reader.readAsDataURL(file);
-    }
-});
-
-// Menampilkan foto yang tersimpan
-const savedPhoto =
-localStorage.getItem('fotoProfil');
-
-if(savedPhoto){
-    document.getElementById('fotoProfil').src =
-    savedPhoto;
-}
-
-</script>
 
 </body>
 </html>
