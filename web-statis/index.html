@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Portofolio Ekatiara</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,230 +11,173 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:#f8fafc;
-    color:#333;
+    background:#dcebf5;
+    padding:40px;
 }
 
-/* NAVBAR */
+/* HEADER CARD */
 
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-    background:#0f172a;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
-nav{
-    max-width:1200px;
-    margin:auto;
+.profile-card{
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:18px 25px;
+    gap:35px;
+    margin-bottom:40px;
 }
 
-.logo{
-    color:white;
-    font-size:28px;
-    font-weight:700;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:30px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    font-size:16px;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#38bdf8;
-}
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    background:linear-gradient(135deg,#0f172a,#334155);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    color:white;
-    padding:120px 20px 50px;
-}
-
-.hero img{
-    width:220px;
-    height:220px;
-    border-radius:50%;
+.profile-photo img{
+    width:180px;
+    height:180px;
     object-fit:cover;
-    border:6px solid white;
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
-.hero h1{
-    margin-top:25px;
-    font-size:60px;
-    font-weight:700;
+.profile-info{
+    flex:1;
 }
 
-.hero p{
-    margin-top:10px;
-    font-size:24px;
-    color:#e2e8f0;
-}
-
-.hero-buttons{
-    margin-top:30px;
-}
-
-.btn{
+.badge{
     display:inline-block;
-    padding:14px 30px;
+    background:#bfe3ff;
+    color:#1565c0;
+    padding:8px 18px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.profile-info h1{
+    font-size:56px;
+    color:#1e293b;
+    margin-bottom:10px;
+}
+
+.profile-info .subtitle{
+    color:#475569;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.profile-info .desc{
+    color:#475569;
+    max-width:700px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.buttons a{
+    text-decoration:none;
+    background:#f1f5f9;
+    padding:12px 22px;
+    border-radius:12px;
+    color:#1e293b;
+    transition:0.3s;
+}
+
+.buttons a:hover{
     background:#38bdf8;
     color:white;
-    text-decoration:none;
-    border-radius:10px;
-    margin:10px;
-    transition:.3s;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
+/* CARD */
+
+.card{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    margin-bottom:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-/* SECTION */
-
-section{
-    padding:90px 10%;
+.card h2{
+    color:#0284c7;
+    margin-bottom:25px;
 }
 
-.section-title{
-    text-align:center;
-    font-size:40px;
-    margin-bottom:40px;
-    color:#0f172a;
+table{
+    width:100%;
 }
 
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
+table td{
+    padding:10px 0;
     font-size:18px;
-    line-height:1.8;
 }
 
-/* SKILLS */
+.label{
+    width:180px;
+    color:#0369a1;
+    font-weight:bold;
+}
+
+/* SKILL */
 
 .skills{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+    gap:15px;
 }
 
-.skill-card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
+.skill{
+    background:#eff6ff;
+    padding:15px;
+    border-radius:12px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.skill-card h3{
-    color:#0f172a;
+    font-weight:600;
 }
 
 /* PROJECT */
 
 .projects{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.project-card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.project-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.project-content{
+.project{
+    background:#f8fafc;
     padding:20px;
+    border-radius:15px;
 }
 
-.project-content h3{
+.project h3{
     margin-bottom:10px;
+    color:#0f172a;
 }
 
-/* CONTACT */
-
-.contact{
-    text-align:center;
+.project p{
+    color:#64748b;
 }
 
-.contact p{
-    margin:10px 0;
-    font-size:18px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
+/* MOBILE */
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:42px;
+body{
+    padding:20px;
 }
 
-.hero p{
-    font-size:18px;
-}
-
-nav{
+.profile-card{
     flex-direction:column;
+    text-align:center;
 }
 
-nav ul{
-    margin-top:15px;
-    flex-wrap:wrap;
+.profile-info h1{
+    font-size:40px;
+}
+
+.buttons{
     justify-content:center;
-}
-
-nav ul li{
-    margin:8px;
 }
 
 }
@@ -247,149 +187,125 @@ nav ul li{
 
 <body>
 
-<header>
-<nav>
+<!-- HEADER -->
 
-<div class="logo">Portofolio</div>
+<div class="profile-card">
 
-<ul>
-<li><a href="#beranda">Beranda</a></li>
-<li><a href="#tentang">Tentang</a></li>
-<li><a href="#keahlian">Keahlian</a></li>
-<li><a href="#proyek">Proyek</a></li>
-<li><a href="#kontak">Kontak</a></li>
-</ul>
+    <div class="profile-photo">
+        <img src="images/foto.jpg" alt="Foto Profil">
+    </div>
 
-</nav>
-</header>
+    <div class="profile-info">
 
-<section class="hero" id="beranda">
+        <div class="badge">
+            DOSEN & DATA SCIENTIST
+        </div>
 
-<img src="images/foto.jpg" alt="Foto Profil">
+        <h1>Ekatiara</h1>
 
-<h1>Ekatiara</h1>
+        <p class="subtitle">
+            Dosen · Informatika · Universitas Siber Syekh Nurjati Cirebon
+        </p>
 
-<p>Dosen | Peneliti | Data Scientist | Web Developer</p>
+        <p class="desc">
+            Dosen yang memiliki minat pada bidang Artificial Intelligence,
+            Machine Learning, Data Science, NLP, Deep Learning,
+            dan Pengembangan Sistem Informasi Berbasis Web.
+        </p>
 
-<div class="hero-buttons">
-<a href="#kontak" class="btn">Hubungi Saya</a>
-<a href="#" class="btn">Download CV</a>
-</div>
+        <div class="buttons">
+            <a href="mailto:ekatiara@email.com">Email</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+        </div>
 
-</section>
-
-<section id="tentang">
-
-<h2 class="section-title">Tentang Saya</h2>
-
-<div class="about">
-
-<p>
-Saya merupakan dosen yang memiliki minat pada bidang Teknologi Informasi,
-Machine Learning, Artificial Intelligence, Data Science, dan Pengembangan Sistem Informasi.
-Aktif dalam kegiatan penelitian, publikasi ilmiah, pengabdian kepada masyarakat,
-serta pengembangan teknologi berbasis web dan kecerdasan buatan.
-</p>
+    </div>
 
 </div>
 
-</section>
+<!-- BIODATA -->
 
-<section id="keahlian">
+<div class="card">
 
-<h2 class="section-title">Keahlian</h2>
+<h2>Biodata</h2>
+
+<table>
+
+<tr>
+<td class="label">Nama</td>
+<td>Ekatiara</td>
+</tr>
+
+<tr>
+<td class="label">Profesi</td>
+<td>Dosen</td>
+</tr>
+
+<tr>
+<td class="label">Bidang</td>
+<td>Artificial Intelligence & Data Science</td>
+</tr>
+
+<tr>
+<td class="label">Email</td>
+<td>ekatiara@email.com</td>
+</tr>
+
+<tr>
+<td class="label">Alamat</td>
+<td>Cirebon, Jawa Barat</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- KEAHLIAN -->
+
+<div class="card">
+
+<h2>Keahlian</h2>
 
 <div class="skills">
 
-<div class="skill-card">
-<h3>HTML & CSS</h3>
-</div>
+<div class="skill">Python</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">Deep Learning</div>
+<div class="skill">Natural Language Processing</div>
+<div class="skill">Data Science</div>
+<div class="skill">Web Development</div>
 
-<div class="skill-card">
-<h3>JavaScript</h3>
-</div>
-
-<div class="skill-card">
-<h3>PHP & Laravel</h3>
-</div>
-
-<div class="skill-card">
-<h3>Python</h3>
-</div>
-
-<div class="skill-card">
-<h3>Machine Learning</h3>
-</div>
-
-<div class="skill-card">
-<h3>Data Science</h3>
 </div>
 
 </div>
 
-</section>
+<!-- PROYEK -->
 
-<section id="proyek">
+<div class="card">
 
-<h2 class="section-title">Proyek</h2>
+<h2>Proyek</h2>
 
 <div class="projects">
 
-<div class="project-card">
-<img src="images/foto.jpg">
-
-<div class="project-content">
-<h3>Sistem Informasi Perpustakaan</h3>
-<p>
-Aplikasi manajemen buku dan peminjaman berbasis web.
-</p>
-</div>
+<div class="project">
+<h3>Prediksi Harga Saham</h3>
+<p>Menggunakan Deep Learning LSTM untuk prediksi time series.</p>
 </div>
 
-<div class="project-card">
-<img src="images/foto.jpg">
-
-<div class="project-content">
+<div class="project">
 <h3>Analisis Sentimen</h3>
-<p>
-Implementasi TF-IDF dan Naive Bayes untuk klasifikasi sentimen.
-</p>
-</div>
+<p>TF-IDF, Naive Bayes dan Logistic Regression.</p>
 </div>
 
-<div class="project-card">
-<img src="images/foto.jpg">
-
-<div class="project-content">
-<h3>Prediksi Saham LSTM</h3>
-<p>
-Prediksi harga saham menggunakan Deep Learning LSTM.
-</p>
-</div>
+<div class="project">
+<h3>Klasifikasi Buah dan Sayuran</h3>
+<p>CNN untuk identifikasi kualitas buah dan sayuran.</p>
 </div>
 
 </div>
 
-</section>
-
-<section id="kontak">
-
-<h2 class="section-title">Kontak</h2>
-
-<div class="contact">
-
-<p>📧 ekatiara@email.com</p>
-<p>📱 +62 812-3456-7890</p>
-<p>🌐 linkedin.com/in/ekatiara</p>
-<p>💻 github.com/ekatiara</p>
-
 </div>
-
-</section>
-
-<footer>
-<p>© 2026 Portofolio Ekatiara. All Rights Reserved.</p>
-</footer>
 
 </body>
 </html>
