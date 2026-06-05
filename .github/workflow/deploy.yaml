@@ -37,4 +37,4 @@ jobs:
         script: |
           sudo docker rm -f uas_2388010031_eka || true
           sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/uas_2388010031_eka:latest
-          sudo docker run -d --nameuas_2388010031_eka -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/uas_2388010031_eka:latest
+          sudo docker run -d --name uas_2388010031_eka -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/uas_2388010031_eka:latest
