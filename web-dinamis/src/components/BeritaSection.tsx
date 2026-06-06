@@ -38,10 +38,8 @@ export default function BeritaSection() {
       {loading ? (
         <div className="berita-grid">
           {[1, 2, 3, 4].map((i) => (
-            <div className="card card--skeleton" key={i}>
-              <div className="skeleton skeleton--img" />
-              <div className="skeleton skeleton--title" />
-              <div className="skeleton skeleton--text" />
+            <div className="card card--skeleton" key={i} style={{ minHeight: 200 }}>
+              <div className="skeleton skeleton--img" style={{ height: "100%" }} />
             </div>
           ))}
         </div>
@@ -52,17 +50,30 @@ export default function BeritaSection() {
       ) : (
         <div className="berita-grid">
           {items.map((item, i) => (
-            <article className="card berita-card" key={item.id_menu} style={{ animationDelay: `${i * 0.1}s` }}>
-              {item.gambar && (
-                <div className="berita-card__img">
+            <article className="berita-horizontal-card" key={item.id_menu} style={{ animationDelay: `${i * 0.1}s` }}>
+              {item.gambar ? (
+                <div className="berita-horizontal-card__img">
                   <img src={item.gambar} alt={item.nama_menu} loading="lazy" />
                 </div>
+              ) : (
+                <div className="berita-horizontal-card__img" style={{ display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(255,255,255,0.03)", fontSize: "2.5rem" }}>
+                  🍽️
+                </div>
               )}
-              <div className="berita-card__body">
-                <span className="berita-card__date">{item.nama_kategori}</span>
-                <h3>{item.nama_menu}</h3>
-                <p>{item.deskripsi || "Menu yang tersimpan dalam database."}</p>
-                <strong style={{ color: "var(--accent)" }}>Rp {Number(item.harga).toLocaleString("id-ID")}</strong>
+              <div className="berita-horizontal-card__body">
+                <div>
+                  <span className="berita-horizontal-card__category">{item.nama_kategori || "Menu"}</span>
+                  <h3>{item.nama_menu}</h3>
+                  <p>{item.deskripsi || "Menu spesial pilihan terbaik dari dapur kami."}</p>
+                </div>
+                <div className="berita-horizontal-card__footer">
+                  <strong style={{ color: "var(--accent-blue)", fontSize: "1.2rem" }}>
+                    Rp {Number(item.harga).toLocaleString("id-ID")}
+                  </strong>
+                  <span style={{ fontSize: "0.8rem", color: "var(--text-dim)", background: "rgba(255,255,255,0.06)", padding: "4px 8px", borderRadius: "12px" }}>
+                    Stok: {item.stok}
+                  </span>
+                </div>
               </div>
             </article>
           ))}

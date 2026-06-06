@@ -50,7 +50,7 @@ export default async function LayananAdminPage() {
           <tbody>
             {layanan.length === 0 ? (
               <tr>
-                <td colSpan={5} style={{ textAlign: "center", padding: "48px", color: "#94a3b8" }}>
+                <td colSpan={5} style={{ textAlign: "center", padding: "48px", color: "var(--text-dim)" }}>
                   Belum ada layanan. Klik &quot;Tambah Layanan&quot; untuk memulai.
                 </td>
               </tr>
@@ -60,15 +60,15 @@ export default async function LayananAdminPage() {
                   <span className="admin-badge admin-badge-blue">#{item.urutan}</span>
                 </td>
                 <td>
-                  <div style={{ fontWeight: 700, fontSize: "14px", color: "#1e293b" }}>{item.nama}</div>
+                  <div style={{ fontWeight: 700, fontSize: "14px", color: "var(--text-main)" }}>{item.nama}</div>
                 </td>
                 <td className="admin-col-hide-mobile">
-                  <div style={{ fontSize: "13px", color: "#64748b" }}>
+                  <div style={{ fontSize: "13px", color: "var(--text-dim)" }}>
                     {item.deskripsi}
                   </div>
                 </td>
                 <td>
-                  <code style={{ fontSize: "12px", background: "#f1f5f9", padding: "3px 8px", borderRadius: "6px", color: "#475569" }}>
+                  <code style={{ fontSize: "12px", background: "var(--glass)", padding: "3px 8px", borderRadius: "6px", color: "var(--text-dim)" }}>
                     {item.icon}
                   </code>
                 </td>

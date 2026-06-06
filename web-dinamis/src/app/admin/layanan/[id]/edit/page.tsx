@@ -16,7 +16,7 @@ const SaveIcon = () => (
   </svg>
 );
 
-const ICONS = ["code", "brain", "cloud", "shield", "layers", "bar-chart", "git-merge", "database", "globe", "zap", "cpu", "lock"];
+const ICONS = ["utensils", "chef-hat", "coffee", "pizza", "cake", "glass-water", "store", "clock", "sparkles", "heart", "gift", "truck"];
 
 export default async function EditLayananPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -66,7 +66,7 @@ export default async function EditLayananPage({ params }: { params: Promise<{ id
               defaultValue={layanan.deskripsi} />
           </div>
 
-          <div style={{ display: "flex", justifyContent: "flex-end", gap: "12px", paddingTop: "8px", borderTop: "1px solid #f1f5f9" }}>
+          <div style={{ display: "flex", justifyContent: "flex-end", gap: "12px", paddingTop: "8px", borderTop: "1px solid var(--glass-border)" }}>
             <Link href="/admin/layanan" className="admin-btn admin-btn-secondary">Batal</Link>
             <button type="submit" className="admin-btn admin-btn-primary">
               <SaveIcon /> Simpan Perubahan

@@ -19,23 +19,56 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="hero" className="hero" ref={sectionRef}>
-      <div className="floating-accent" style={{ top: "20%", left: "10%" }} />
-      <div className="floating-accent floating-accent--alt" style={{ bottom: "10%", right: "15%" }} />
+    <section id="hero" className="hero hero-split" ref={sectionRef}>
+      <div className="floating-accent" style={{ top: "10%", left: "5%" }} />
+      <div className="floating-accent floating-accent--alt" style={{ bottom: "20%", right: "10%" }} />
 
-      <span className="hero-tagline">RESTORAN KELUARGA TERBAIK DI KOTA ANDA</span>
-      <h1 className="hero-title">
-        SELAMAT DATANG DI
-        <br />
-        <span className="hero-title--gradient">RESTO NUSANTARA</span>
-      </h1>
-      <p className="hero-description">
-        Nikmati berbagai pilihan makanan dan minuman khas Indonesia yang
-        dibuat dengan bahan berkualitas dan cita rasa terbaik.
-      </p>
-      <a href="#services" className="cta-button">
-        LIHAT MENU
-      </a>
+      <div className="hero-container">
+        <div className="hero-content-left">
+          <span className="hero-tagline">Restoran Keluarga Terbaik di Kota Anda</span>
+          <h1 className="hero-title">
+            Selamat Datang di
+            <br />
+            <span className="hero-title--gradient">Resto Nusantara</span>
+          </h1>
+          <p className="hero-description">
+            Nikmati kelezatan berbagai hidangan khas Indonesia yang dimasak dengan rempah-rempah pilihan terbaik, resep warisan leluhur, dan disajikan dengan cinta.
+          </p>
+          <div className="hero-buttons">
+            <a href="#services" className="cta-button cta-button--primary">
+              Lihat Menu
+            </a>
+            <a href="#contact" className="cta-button cta-button--secondary">
+              Reservasi Meja
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-content-right">
+          <div className="hero-image-wrapper">
+            <div className="hero-glow-ring" />
+            <img 
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop" 
+              alt="Signature Dish Resto Nusantara" 
+              className="hero-featured-image"
+            />
+            <div className="hero-badge hero-badge--top">
+              <span className="hero-badge-icon">⭐</span>
+              <div>
+                <div className="hero-badge-title">Terfavorit</div>
+                <div className="hero-badge-desc">Sate Nusantara</div>
+              </div>
+            </div>
+            <div className="hero-badge hero-badge--bottom">
+              <span className="hero-badge-icon">🌶️</span>
+              <div>
+                <div className="hero-badge-title">100% Autentik</div>
+                <div className="hero-badge-desc">Rempah Pilihan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

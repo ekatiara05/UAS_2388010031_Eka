@@ -27,7 +27,7 @@ export default async function KontakAdminPage() {
           <div className="admin-page-title">Pesan Masuk</div>
           <div className="admin-page-subtitle">
             {unread > 0
-              ? <span><strong style={{ color: "#2563eb" }}>{unread} pesan baru</strong> belum dibaca dari {kontak.length} total pesan</span>
+              ? <span><strong style={{ color: "var(--accent-purple)" }}>{unread} pesan baru</strong> belum dibaca dari {kontak.length} total pesan</span>
               : `${kontak.length} pesan — semua sudah dibaca`
             }
           </div>
@@ -48,30 +48,30 @@ export default async function KontakAdminPage() {
           <tbody>
             {kontak.length === 0 ? (
               <tr>
-                <td colSpan={5} style={{ textAlign: "center", padding: "48px", color: "#94a3b8" }}>
+                <td colSpan={5} style={{ textAlign: "center", padding: "48px", color: "var(--text-dim)" }}>
                   Belum ada pesan masuk.
                 </td>
               </tr>
             ) : kontak.map((item: any) => (
-              <tr key={item.id} style={{ background: item.is_read ? "transparent" : "rgba(239,246,255,0.5)" }}>
+              <tr key={item.id} style={{ background: item.is_read ? "transparent" : "rgba(234, 88, 12, 0.06)" }}>
                 <td style={{ verticalAlign: "middle" }}>
                   {!item.is_read && (
-                    <span style={{ display: "block", width: "8px", height: "8px", borderRadius: "50%", background: "#3b82f6" }} />
+                    <span style={{ display: "block", width: "8px", height: "8px", borderRadius: "50%", background: "var(--accent-purple)" }} />
                   )}
                 </td>
                 <td style={{ verticalAlign: "top" }}>
-                  <div style={{ fontWeight: item.is_read ? 500 : 700, fontSize: "13px", color: "#1e293b" }}>{item.nama}</div>
-                  <div style={{ fontSize: "12px", color: "#94a3b8", marginTop: "2px" }}>{item.email}</div>
+                  <div style={{ fontWeight: item.is_read ? 500 : 700, fontSize: "13px", color: "var(--text-main)" }}>{item.nama}</div>
+                  <div style={{ fontSize: "12px", color: "var(--text-dim)", marginTop: "2px" }}>{item.email}</div>
                 </td>
                 <td style={{ verticalAlign: "top" }}>
                   {item.subjek && (
-                    <div style={{ fontWeight: 600, fontSize: "13px", color: "#374151", marginBottom: "4px" }}>{item.subjek}</div>
+                    <div style={{ fontWeight: 600, fontSize: "13px", color: "var(--text-main)", marginBottom: "4px" }}>{item.subjek}</div>
                   )}
-                  <div style={{ fontSize: "13px", color: "#64748b", maxWidth: "400px", overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>
+                  <div style={{ fontSize: "13px", color: "var(--text-dim)", maxWidth: "400px", overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>
                     {item.pesan}
                   </div>
                 </td>
-                <td style={{ verticalAlign: "top", fontSize: "12px", color: "#94a3b8", whiteSpace: "nowrap" }} className="admin-col-hide-mobile">
+                <td style={{ verticalAlign: "top", fontSize: "12px", color: "var(--text-dim)", whiteSpace: "nowrap" }} className="admin-col-hide-mobile">
                   {new Date(item.created_at).toLocaleDateString("id-ID", { day: "2-digit", month: "short", year: "numeric" })}
                 </td>
                 <td style={{ verticalAlign: "top" }}>

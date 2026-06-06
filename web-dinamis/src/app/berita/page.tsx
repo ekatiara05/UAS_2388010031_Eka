@@ -24,7 +24,7 @@ export default async function BeritaIndexPage() {
           Ruang <span className="text-gradient">Berita</span>
         </h1>
         <p className="section-subtitle">
-          Informasi, pembaruan, dan wawasan terkini dari DigiTech
+          Informasi, pembaruan, dan wawasan kuliner terkini dari Resto Nusantara
         </p>
       </div>
 

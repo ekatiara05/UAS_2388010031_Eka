@@ -45,35 +45,46 @@ export default function VisionSection() {
     <section id="vision" className="vision">
       <div className="vision-flex">
         <div className="vision-text">
-          <span className="hero-tagline">Tentang UAS EKA</span>
+          <span className="hero-tagline">Tentang Kami</span>
           <h2 className="vision-heading">
-            Nikmati <span className="text-gradient">Pengalaman Kami</span>
+            Nikmati <span className="text-gradient">Cita Rasa Nusantara</span>
           </h2>
           <p className="vision-desc">
-            UAS EKA hadir dengan menu yang menarik, pelayanan yang ramah, dan
-            reservasi meja yang praktis untuk pengalaman makan yang nyaman dan
-            menyenangkan.
+            Resto Nusantara hadir dengan aneka hidangan khas yang autentik, pelayanan yang ramah, dan
+            suasana yang hangat untuk pengalaman bersantap yang tak terlupakan bersama keluarga Anda.
           </p>
           <div className="stats-row">
             <div className="stat">
-              <AnimatedCounter target={999} suffix="%" />
-              <span className="stat-label">Uptime SLA</span>
-            </div>
-            <div className="stat">
-              <AnimatedCounter target={500} suffix="+" />
-              <span className="stat-label">Proyek Global</span>
-            </div>
-            <div className="stat">
               <AnimatedCounter target={50} suffix="+" />
-              <span className="stat-label">Enterprise Client</span>
+              <span className="stat-label">Menu Pilihan</span>
+            </div>
+            <div className="stat">
+              <AnimatedCounter target={12} suffix="+" />
+              <span className="stat-label">Koki Profesional</span>
+            </div>
+            <div className="stat">
+              <AnimatedCounter target={100} suffix="%" />
+              <span className="stat-label">Bahan Segar</span>
             </div>
           </div>
         </div>
         <div className="vision-visual">
-          <div className="orbit-container">
-            <div className="orbit orbit--outer" />
-            <div className="orbit orbit--inner" />
-            <div className="orbit-core">CORE</div>
+          <div className="about-image-collage">
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" 
+              alt="Interior Restoran" 
+              className="collage-img collage-img--1" 
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop" 
+              alt="Hidangan Lezat" 
+              className="collage-img collage-img--2" 
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop" 
+              alt="Dapur Bersih" 
+              className="collage-img collage-img--3" 
+            />
           </div>
         </div>
       </div>

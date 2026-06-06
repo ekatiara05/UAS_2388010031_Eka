@@ -29,7 +29,7 @@ export default function ContactSection() {
         Hubungi <span className="text-gradient">Kami</span>
       </h2>
       <p className="section-subtitle">
-        Ada pertanyaan atau ingin berdiskusi tentang proyek Anda? Kami siap membantu.
+        Ada pertanyaan, ingin memesan katering, atau reservasi tempat khusus? Hubungi kami dan tim kami akan segera membantu Anda.
       </p>
 
       <form className="contact-form" onSubmit={handleSubmit}>
@@ -76,7 +76,7 @@ export default function ContactSection() {
             required
             value={form.pesan}
             onChange={(e) => setForm({ ...form, pesan: e.target.value })}
-            placeholder="Ceritakan kebutuhan Anda..."
+            placeholder="Tulis pesan Anda, detail katering, atau informasi reservasi meja Anda di sini..."
           />
         </div>
 

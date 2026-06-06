@@ -124,7 +124,7 @@ export default function LoginPage() {
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
               backgroundClip: "text", letterSpacing: "-0.5px",
             }}>
-              Digi<span style={{ WebkitTextFillColor: "#60a5fa", backgroundImage: "none" }}>Tech</span>
+              Resto <span style={{ WebkitTextFillColor: "#ea580c", backgroundImage: "none" }}>Nusantara</span>
             </h1>
             <p style={{ color: "#64748b", fontSize: "14px", margin: 0, letterSpacing: "0.3px" }}>
               Secure Admin Area
@@ -264,7 +264,7 @@ export default function LoginPage() {
           </form>
 
           <p style={{ textAlign: "center", marginTop: "24px", color: "#334155", fontSize: "12px" }}>
-            © 2026 DigiTech • Secure Control Panel
+            © 2026 Resto Nusantara • Secure Control Panel
           </p>
         </div>
       </div>

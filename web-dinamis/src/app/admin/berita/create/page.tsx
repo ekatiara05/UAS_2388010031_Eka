@@ -32,22 +32,22 @@ export default function CreateBeritaPage() {
           {/* Publish toggle */}
           <div style={{
             display: "flex", justifyContent: "space-between", alignItems: "center",
-            padding: "16px 20px", background: "#f8fafc", borderRadius: "12px",
-            border: "1px solid #e2e8f0", marginBottom: "24px",
+            padding: "16px 20px", background: "var(--glass)", borderRadius: "12px",
+            border: "1px solid var(--glass-border)", marginBottom: "24px",
           }}>
             <div>
-              <div style={{ fontWeight: 600, fontSize: "14px", color: "#1e293b" }}>Status Publikasi</div>
-              <div style={{ fontSize: "12px", color: "#64748b", marginTop: "2px" }}>Aktifkan agar berita langsung tampil ke publik</div>
+              <div style={{ fontWeight: 600, fontSize: "14px", color: "var(--text-main)" }}>Status Publikasi</div>
+              <div style={{ fontSize: "12px", color: "var(--text-dim)", marginTop: "2px" }}>Aktifkan agar berita langsung tampil ke publik</div>
             </div>
             <label style={{ display: "flex", alignItems: "center", gap: "10px", cursor: "pointer" }}>
-              <input type="checkbox" name="is_published" defaultChecked style={{ width: "18px", height: "18px", accentColor: "#2563eb", cursor: "pointer" }} />
-              <span style={{ fontSize: "13px", fontWeight: 600, color: "#374151" }}>Published</span>
+              <input type="checkbox" name="is_published" defaultChecked style={{ width: "18px", height: "18px", accentColor: "var(--accent-purple)", cursor: "pointer" }} />
+              <span style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-main)" }}>Published</span>
             </label>
           </div>
 
           <div className="admin-form-group">
             <label className="admin-form-label">Judul Berita <span style={{ color: "#ef4444" }}>*</span></label>
-            <input name="judul" required type="text" className="admin-form-input" placeholder="Contoh: DigiTech Merilis Layanan AI Terbaru" />
+            <input name="judul" required type="text" className="admin-form-input" placeholder="Contoh: Resto Nusantara Merilis Menu Baru Hari Ini" />
           </div>
 
           <div className="admin-form-group">
@@ -69,7 +69,7 @@ export default function CreateBeritaPage() {
             <div style={{ fontSize: "12px", color: "#94a3b8", marginTop: "4px" }}>Gunakan tag HTML untuk format teks (paragraf, bold, list, dll.)</div>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "flex-end", gap: "12px", paddingTop: "8px", borderTop: "1px solid #f1f5f9" }}>
+          <div style={{ display: "flex", justifyContent: "flex-end", gap: "12px", paddingTop: "8px", borderTop: "1px solid var(--glass-border)" }}>
             <Link href="/admin/berita" className="admin-btn admin-btn-secondary">Batal</Link>
             <button type="submit" className="admin-btn admin-btn-primary">
               <SaveIcon /> Simpan Berita

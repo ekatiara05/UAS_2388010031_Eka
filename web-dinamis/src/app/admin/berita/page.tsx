@@ -52,19 +52,19 @@ export default async function BeritaAdminPage() {
           <tbody>
             {berita.length === 0 ? (
               <tr>
-                <td colSpan={5} style={{ textAlign: "center", padding: "48px", color: "#94a3b8" }}>
+                <td colSpan={5} style={{ textAlign: "center", padding: "48px", color: "var(--text-dim)" }}>
                   Belum ada berita. Klik &quot;Tulis Berita Baru&quot; untuk memulai.
                 </td>
               </tr>
             ) : berita.map((item: any) => (
               <tr key={item.id}>
-                <td style={{ color: "#94a3b8", fontWeight: 500, width: "40px" }}>{item.id}</td>
+                <td style={{ color: "var(--text-dim)", opacity: 0.8, fontWeight: 500, width: "40px" }}>{item.id}</td>
                 <td>
-                  <div style={{ fontWeight: 600, color: "#1e293b", fontSize: "13px" }}>
+                  <div style={{ fontWeight: 600, color: "var(--text-main)", fontSize: "13px" }}>
                     {item.judul}
                   </div>
                 </td>
-                <td className="admin-col-hide-mobile" style={{ color: "#64748b", fontSize: "13px", whiteSpace: "nowrap" }}>
+                <td className="admin-col-hide-mobile" style={{ color: "var(--text-dim)", fontSize: "13px", whiteSpace: "nowrap" }}>
                   {new Date(item.created_at).toLocaleDateString("id-ID", { day: "2-digit", month: "short", year: "numeric" })}
                 </td>
                 <td style={{ textAlign: "center" }}>

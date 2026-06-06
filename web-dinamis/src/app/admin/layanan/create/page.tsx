@@ -12,7 +12,7 @@ const SaveIcon = () => (
   </svg>
 );
 
-const ICONS = ["code", "brain", "cloud", "shield", "layers", "bar-chart", "git-merge", "database", "globe", "zap", "cpu", "lock"];
+const ICONS = ["utensils", "chef-hat", "coffee", "pizza", "cake", "glass-water", "store", "clock", "sparkles", "heart", "gift", "truck"];
 
 export default function CreateLayananPage() {
   return (
@@ -32,7 +32,7 @@ export default function CreateLayananPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
             <div className="admin-form-group" style={{ gridColumn: "1 / -1" }}>
               <label className="admin-form-label">Nama Layanan <span style={{ color: "#ef4444" }}>*</span></label>
-              <input name="nama" required type="text" className="admin-form-input" placeholder="Contoh: Cloud Enterprise" />
+              <input name="nama" required type="text" className="admin-form-input" placeholder="Contoh: Layanan Katering VIP" />
             </div>
 
             <div className="admin-form-group">
@@ -56,7 +56,7 @@ export default function CreateLayananPage() {
               placeholder="Jelaskan layanan ini secara singkat dan menarik..." />
           </div>
 
-          <div style={{ display: "flex", justifyContent: "flex-end", gap: "12px", paddingTop: "8px", borderTop: "1px solid #f1f5f9" }}>
+          <div style={{ display: "flex", justifyContent: "flex-end", gap: "12px", paddingTop: "8px", borderTop: "1px solid var(--glass-border)" }}>
             <Link href="/admin/layanan" className="admin-btn admin-btn-secondary">Batal</Link>
             <button type="submit" className="admin-btn admin-btn-primary">
               <SaveIcon /> Simpan Layanan

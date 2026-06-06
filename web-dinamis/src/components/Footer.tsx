@@ -18,14 +18,14 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Layanan</h4>
-            <span>Integrasi AI</span>
-            <span>Cloud Nexus</span>
-            <span>Cyber Fortress</span>
-            <span>Custom Software</span>
+            <span>Katering & Prasmanan</span>
+            <span>Reservasi Meja</span>
+            <span>Layanan Antar Cepat</span>
+            <span>Acara Keluarga & Kantor</span>
           </div>
           <div className="footer-col">
             <h4>Kontak</h4>
-            <span>info@digitech.id</span>
+            <span>info@restonusantara.com</span>
             <span>+62 812 3456 7890</span>
             <span>Jakarta, Indonesia</span>
           </div>
