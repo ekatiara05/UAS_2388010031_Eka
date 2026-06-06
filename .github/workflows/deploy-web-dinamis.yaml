@@ -28,7 +28,7 @@ jobs:
           file: ./web-dinamis/Dockerfile
           push: true
           no-cache: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ web-dinamis_uas_031:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-dinamis_uas_031:latest
 
   deploy-to-ec2:
     runs-on: ubuntu-latest
