@@ -1,0 +1,10 @@
+{
+  "name": "uas-eka",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix web-dinamis run dev",
+    "build": "npm --prefix web-dinamis run build",
+    "start": "npm --prefix web-dinamis run start",
+    "lint": "npm --prefix web-dinamis run lint"
+  }
+}
