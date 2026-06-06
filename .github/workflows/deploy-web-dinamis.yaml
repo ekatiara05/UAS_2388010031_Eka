@@ -28,7 +28,7 @@ jobs:
           file: ./web-dinamis/Dockerfile
           push: true
           no-cache: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-dinamis_uas_031:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ web-dinamis_uas_031:latest
 
   deploy-to-ec2:
     runs-on: ubuntu-latest
@@ -59,7 +59,7 @@ jobs:
             # Pull latest docker image
             sudo docker pull ekatiara/web-dinamis_uas_031:latest
             # Recreate Next.js container
-            sudo DOCKERHUB_USERNAME=ekatiara docker compose up -d --force-recreate --no-deps container-dinamis
+            sudo DOCKERHUB_USERNAME = ekatiara docker compose up -d --force-recreate --no-deps container-dinamis
             # Clean up old images
             sudo docker image prune -af
             # Reset database and import latest SQL script
