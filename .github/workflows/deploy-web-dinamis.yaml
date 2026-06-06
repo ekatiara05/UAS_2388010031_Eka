@@ -57,7 +57,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             # Pull latest docker image
-            sudo docker pull 1005morinpitalaura/web-dinamis_uas_031:latest
+            sudo docker pull ekatiara/web-dinamis_uas_031:latest
             # Recreate Next.js container
             sudo DOCKERHUB_USERNAME=ekatiara docker compose up -d --force-recreate --no-deps container-dinamis
             # Clean up old images
