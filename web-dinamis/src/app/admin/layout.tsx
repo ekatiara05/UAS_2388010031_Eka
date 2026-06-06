@@ -84,7 +84,7 @@ function AdminShell({ children }: { children: React.ReactNode }) {
       <aside className={`admin-sidebar ${sidebarOpen ? "admin-sidebar--open" : ""}`}>
         <div className="admin-sidebar-logo">
           <HexIcon />
-          <span>Digi<span style={{ color: "#2563eb" }}>Tech</span></span>
+          <span>Resto <span style={{ color: "#fbbf24" }}>Nusantara</span></span>
           {/* Close button inside sidebar (mobile) */}
           <button
             className="admin-close-btn"

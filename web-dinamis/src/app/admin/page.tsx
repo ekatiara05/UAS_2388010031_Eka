@@ -26,11 +26,11 @@ export default async function AdminDashboard() {
   return (
     <div>
       <div style={{ marginBottom: "28px" }}>
-        <h2 style={{ fontSize: "22px", fontWeight: 800, color: "#0f172a", marginBottom: "6px" }}>
-          Selamat Datang 👋
+        <h2 style={{ fontSize: "22px", fontWeight: 800, color: "#111827", marginBottom: "6px" }}>
+          Selamat Datang di Panel Admin Resto Nusantara 👋
         </h2>
-        <p style={{ color: "#64748b", fontSize: "14px" }}>
-          Berikut adalah ringkasan konten website DigiTech Anda.
+        <p style={{ color: "#6b7280", fontSize: "14px" }}>
+          Kelola berita, layanan, dan pesan pelanggan dari satu dashboard yang lebih hangat dan lebih personal.
         </p>
       </div>
 
@@ -59,7 +59,7 @@ export default async function AdminDashboard() {
         {/* Recent Berita */}
         <div className="admin-card">
           <div style={{ padding: "20px 24px", borderBottom: "1px solid #f1f5f9", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div style={{ fontSize: "15px", fontWeight: 700, color: "#0f172a" }}>Berita Terbaru</div>
+            <div style={{ fontSize: "15px", fontWeight: 700, color: "#0f172a" }}>Berita Terbaru Kami</div>
             <Link href="/admin/berita/create" className="admin-btn admin-btn-primary" style={{ padding: "6px 14px", fontSize: "12px" }}>+ Tulis</Link>
           </div>
           <div>
@@ -84,7 +84,7 @@ export default async function AdminDashboard() {
         {/* Recent Kontak */}
         <div className="admin-card">
           <div style={{ padding: "20px 24px", borderBottom: "1px solid #f1f5f9", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div style={{ fontSize: "15px", fontWeight: 700, color: "#0f172a" }}>Pesan Terbaru</div>
+            <div style={{ fontSize: "15px", fontWeight: 700, color: "#0f172a" }}>Pesan Pelanggan</div>
             <Link href="/admin/kontak" className="admin-btn admin-btn-secondary" style={{ padding: "6px 14px", fontSize: "12px" }}>Lihat Semua</Link>
           </div>
           <div>
