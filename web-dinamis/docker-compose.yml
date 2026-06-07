@@ -8,7 +8,7 @@ services:
       MARIADB_PASSWORD: apJG]QGtLZR!k_JA
     volumes:
       - db_data:/var/lib/mysql
-      - ./db_data/dbcompro.sql:/docker-entrypoint-initdb.d/dbcompro.sql:ro
+      - ./db_data/db_uas.sql:/docker-entrypoint-initdb.d/db_uas.sql:ro
     restart: always
 
   container-statis:

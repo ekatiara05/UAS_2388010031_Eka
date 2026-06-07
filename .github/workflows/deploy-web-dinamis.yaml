@@ -99,18 +99,29 @@ jobs:
             # ✅ Pull image dengan nama yang benar
             sudo docker pull ekatiara/web-dinamis:latest
 
-            # ✅ Fix: hapus spasi di sekitar tanda =
-            sudo DOCKERHUB_USERNAME=ekatiara docker compose up -d --force-recreate --no-deps container-dinamis
+            # ✅ Recreate both db-webdinamis and container-dinamis to ensure database starts/recreates too
+            sudo DOCKERHUB_USERNAME=ekatiara docker compose up -d --force-recreate db-webdinamis container-dinamis
 
             # Bersihkan image lama
             sudo docker image prune -af
 
-            # ✅ Fix: nama database dan file SQL disesuaikan dengan docker-compose.yml
+            # ✅ Tunggu database container siap menerima koneksi
+            echo "Waiting for database container to be ready..."
+            for i in {1..30}; do
+              if sudo docker compose exec -T db-webdinamis mysqladmin ping -u root -p'password!123' --silent; then
+                echo "Database is ready!"
+                break
+              fi
+              echo "Database is not ready yet, waiting..."
+              sleep 2
+            done
+
+            # ✅ Fix: nama database dan file SQL disesuaikan dengan db_uas.sql
             echo "Resetting and importing database on EC2..."
             sudo docker compose exec -T db-webdinamis mysql -u root -p'password!123' \
               -e "DROP DATABASE IF EXISTS dbcompro; CREATE DATABASE dbcompro;"
             sudo docker compose exec -T db-webdinamis mysql -u root -p'password!123' \
-              dbcompro < db_data/dbcompro.sql
+              dbcompro < db_data/db_uas.sql
 
             echo "=== Status ==="
             sudo docker ps
